@@ -1,32 +1,77 @@
-# React + TypeScript + Vite
+# LogisPro
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+LogisPro is a React + TypeScript web app for cold-chain logistics route intelligence. It helps operators analyze shipping routes, estimate temperature risk, and review compliance guidance before dispatching sensitive cargo.
 
-Currently, two official plugins are available:
+## Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+The application provides a polished experience for:
 
-## React Compiler
+- entering an origin and destination for route analysis
+- viewing estimated distance and duration
+- checking cargo-specific temperature limits
+- generating AI-assisted risk, spoilage, and compliance insights
+- signing in and using a protected dashboard experience
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+The UI is designed around cold-chain transport use cases such as vaccines, medicine, dairy, seafood, frozen food, and fresh produce.
 
-## Expanding the Oxlint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+- React 19
+- TypeScript
+- Vite
+- React Router
+- Firebase Authentication and Realtime Database
+- Google Maps Directions API
+- Google Gemini AI
+- Framer Motion and Recharts
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
-```
+## Project Structure
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+- src/pages: landing page, login, signup, and dashboard views
+- src/components: reusable UI sections such as navbar, cards, FAQ, and previews
+- src/services: route analysis, directions, and Gemini AI integrations
+- src/firebase: Firebase initialization and environment-based configuration
+- src/contexts and src/hooks: authentication state and app-wide hooks
+
+## Getting Started
+
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+2. Create a local environment file:
+   ```bash
+   cp .env.example .env
+   ```
+   If you do not have the required API credentials yet, the app can still run in demo/simulation mode.
+
+3. Add the following environment variables to your .env file:
+   ```env
+   VITE_GEMINI_API_KEY=your_gemini_api_key
+   VITE_FIREBASE_API_KEY=your_firebase_api_key
+   VITE_FIREBASE_AUTH_DOMAIN=your_project.firebaseapp.com
+   VITE_FIREBASE_DATABASE_URL=https://your_project-default-rtdb.firebaseio.com
+   VITE_FIREBASE_PROJECT_ID=your_project_id
+   VITE_FIREBASE_STORAGE_BUCKET=your_project.appspot.com
+   VITE_FIREBASE_MESSAGING_SENDER_ID=your_sender_id
+   VITE_FIREBASE_APP_ID=your_app_id
+   ```
+
+4. Start the development server:
+   ```bash
+   npm run dev
+   ```
+
+## Available Scripts
+
+- npm run dev: start the Vite development server
+- npm run build: build the production bundle
+- npm run preview: preview the production build locally
+- npm run lint: run the Oxlint checks
+
+## Notes
+
+- The app uses Gemini AI for route analysis when a valid API key is configured.
+- If Firebase or Gemini credentials are missing, the app gracefully falls back to simulated/demo behavior.
+- For full route and map functionality, ensure your Google Maps configuration is set up correctly.
