@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary-brand: #EA580C;
+  --color-primary-hover: #C2410C;
+  --color-secondary-accent: #FB923C;
+  --color-accent: #EA580C;
+  --color-accent-hover: #C2410C;
+  --color-sidebar-bg: #1E293B;
+  --color-sidebar-hover: #334155;
+  --color-app-bg: #FFFDF9;
+  --color-alt-bg: #F8F7F4;
+  --color-card-bg: #FFFFFF;
+  --color-card-hover: #FFFBF5;
+  --color-border-custom: #E7E5E4;
+  
+  --color-text-primary: #111827;
+  --color-text-secondary: #6B7280;
+  --color-text-muted: #9CA3AF;
+  
+  --color-success-custom: #16A34A;
+  --color-warning-custom: #F59E0B;
+  --color-error-custom: #DC2626;
+  --color-info-custom: #2563EB;
+  
+  --radius-card: 12px;
+  --radius-btn: 10px;
+  --radius-input: 10px;
+}
+
+@layer base {
+  body {
+    @apply bg-app-bg text-text-primary antialiased min-h-screen;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-text-primary font-bold tracking-tight;
+  }
+}
+
+/* Premium Enterprise Shadows */
+.enterprise-card-shadow {
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+}
+
+.enterprise-card-border {
+  border: 1px solid #E7E5E4;
+}
+
+/* Webkit Scrollbars for Table Ledger and Alert Logs */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #E7E5E4;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #d6d3d1;
+}
+
+/* Custom transitions */
+.smooth-hover {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Grayscale maps container highlights */
+.map-highlight-overlay {
+  border-left: 3px solid #EA580C;
+}
