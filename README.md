@@ -1,9 +1,9 @@
 
-# ❄️ LogisPro
+# ColdchainWise
 
 > AI-powered cold-chain logistics route intelligence platform built with React, TypeScript, Firebase, Google Maps, and Google Gemini AI.
 
-LogisPro is a modern web application that helps logistics operators plan and analyze temperature-sensitive shipments before dispatch. It combines route planning, AI-powered risk analysis, and cold-chain compliance guidance to support the transportation of products such as vaccines, pharmaceuticals, dairy products, seafood, frozen food, and fresh produce.
+ColdchainWise is a modern web application that helps logistics operators plan and analyze temperature-sensitive shipments before dispatch. It combines route planning, AI-powered risk analysis, and cold-chain compliance guidance to support the transportation of products such as vaccines, pharmaceuticals, dairy products, seafood, frozen food, and fresh produce.
 
 ---
 
@@ -73,7 +73,7 @@ Using Google Gemini AI, the application can generate:
 
 # Google Services Used
 
-LogisPro integrates several Google services to provide mapping, route intelligence, and AI-assisted shipment analysis.
+ColdchainWise integrates several Google services to provide mapping, route intelligence, and AI-assisted shipment analysis.
 
 ## Google Maps JavaScript API
 
@@ -326,7 +326,7 @@ Protected Dashboard
 
 # Demo Mode
 
-To simplify development, LogisPro supports a built-in Demo Mode.
+To simplify development, ColdchainWise supports a built-in Demo Mode.
 
 When Firebase or Gemini API credentials are unavailable, the application automatically uses simulated data so the UI and application flow remain functional without requiring cloud services.
 
