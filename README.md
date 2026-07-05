@@ -3,7 +3,7 @@
 
 > AI-powered cold-chain logistics route intelligence platform built with React, TypeScript, Firebase, Google Maps, and Google Gemini AI.
 
-ColdchainWise is a modern web application that helps logistics operators plan and analyze temperature-sensitive shipments before dispatch. It combines route planning, AI-powered risk analysis, and cold-chain compliance guidance to support the transportation of products such as vaccines, pharmaceuticals, dairy products, seafood, frozen food, and fresh produce.
+ColdchainWise is a modern web application that helps logistics operators plan and analyze temperature-sensitive shipments before dispatch. It combines route planning, AI-powered risk analysis, and cold-chain compliance guidance to support the transportation of products such as vaccines, pharmaceuticals, dairy products, seafood, frozen food,fruits and fresh produce.
 
 ---
 
